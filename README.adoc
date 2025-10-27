@@ -1,0 +1,47 @@
+= PetClinic (for JavaPro)
+:toc:
+:toc-placement!:
+
+This application supports a link:https://javapro.io/2025/09/30/apache-causeway-an-introduction[series of articles] in the link:https://javapro.io[JavaPro] e-magazine, describing the capabilities of link:https://causeway.apache.org[Apache Causeway].
+
+It is based on the link:https://causeway.apache.org/tutorials/latest/petclinic/about.html[PetClinic tutorial] on the Causeway website.
+
+
+== Quick start
+
+* install prereqs:
+
+** Java 17 or 21 JDK
+** Maven 3.9 or later (http://maven.apache.org/download.cgi[download])
+
+* Build using Maven:
++
+[source,bash]
+----
+mvn clean install
+----
+
+* Run using Maven:
++
+[source,bash]
+----
+mvn -pl webapp spring-boot:run
+----
+
+* Browse to http://localhost:8080.
+
+* Login using:
+
+** as a regular user:
+
+*** username: `sven`
+*** password: `pass`
+
+** or as the security superuser:
+
+*** username: `secman-admin`
+*** password: `pass`
+
+
+
+

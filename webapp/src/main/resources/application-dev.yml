@@ -1,0 +1,6 @@
+causeway:
+  testing:
+    fixtures:
+      fixture-scripts-specification:
+        run-script-default: domainapp.webapp.application.fixture.scenarios.DomainAppDemo
+      initial-script: domainapp.webapp.application.fixture.scenarios.DomainAppDemo
