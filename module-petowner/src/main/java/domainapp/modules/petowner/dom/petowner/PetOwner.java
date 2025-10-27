@@ -141,6 +141,19 @@ public class PetOwner implements Comparable<PetOwner> {
     @Property(editing = Editing.ENABLED, optionality = Optionality.OPTIONAL)
     private EmailAddress emailAddress;
 
+    @Property(editing = Editing.ENABLED)
+    @PropertyLayout(named = "what3words",
+            describedAs = "A 3-word address, e.g. '///apple.banana.orange'")
+    @Column(length = 64, nullable = true, name = "what3words")
+    @Getter @Setter
+    private String what3words;
+
+    @MemberSupport public String validateWhat3words(String proposed) {
+        return proposed == null || proposed.startsWith("///")
+                ? null
+                : "Must start with '///' (e.g. '///apple.banana.orange')";
+    }
+
     @Notes
     @Column(length = Notes.MAX_LEN, nullable = true)
     @Getter @Setter
